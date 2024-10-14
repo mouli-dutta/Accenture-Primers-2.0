@@ -1,34 +1,10 @@
-months = ['January', 'February', 'March', 
-           'April',   'May',     'June',
-           'July',    'August',  'September',
-           'October', 'November', 'December']
+months = ['January', 'February', 'March', 'April', 'May', 'June', 
+           'July', 'August', 'September', 'October', 'November', 'December']
 
 print('Months in expanded form:')
-for m in months:
-  print(m)
+print('\n'.join(months))
 
-print('\nThe four quarters are:\n')
-
-print('First Quarter:')
-for m in months[:3]:
-  print(m)
-
-
-print('\nSecond Quarter:')
-for m in months[3:6]:
-  print(m)
-
-
-print('\nThird Quarter:')
-for m in months[6:9]:
-  print(m)
-
-
-print('\nFourth Quarter:')
-for m in months[9:]:
-  print(m)
-
-
-
-
-
+quarters = ['First', 'Second', 'Third', 'Fourth']
+for i, quarter in enumerate(quarters):
+    print(f'\n{quarter} Quarter:')
+    print('\n'.join(months[i * 3: (i + 1) * 3]))
