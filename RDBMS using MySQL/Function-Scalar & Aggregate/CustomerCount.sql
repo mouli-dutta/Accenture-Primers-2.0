@@ -1,0 +1,6 @@
+SELECT
+  COUNT(enquiry_id) AS ENQUIRY_COUNT
+FROM Enquiry_Master
+GROUP BY cust_id
+HAVING COUNT(enquiry_id) > 1
+ORDER BY ENQUIRY_COUNT DESC;
